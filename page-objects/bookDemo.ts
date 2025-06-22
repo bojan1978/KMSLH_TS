@@ -1,10 +1,11 @@
 import { Page, expect } from '@playwright/test'
 import testData from '../test-data/bookDemoData.json'
+import {getDemoData} from '../test-data/bookDemoData'
 
 export class BookDemo{
 
     readonly page: Page 
-    constructor(page) {
+    constructor(page: Page) {
         this.page = page
     }
 
@@ -14,7 +15,8 @@ export class BookDemo{
     }
 
     async inputAndAssertData(){
-            for(let i=0; i<6; i++){
+            const listLength = getDemoData().length
+            for(let i=0; i<listLength ; i++){
                 await this.page.getByPlaceholder(testData.data[i].placeholder).fill(testData.data[i].text)
                 expect(await this.page.getByPlaceholder(testData.data[i].placeholder).inputValue()).toEqual(testData.data[i].text)
             }

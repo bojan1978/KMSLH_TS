@@ -24,7 +24,6 @@ test.describe('Book a Demo', () => {
     test('Enter values', async({page}) => {
         const bookDemo = new BookDemo(page)
         await bookDemo.inputAndAssertData()
-
     })
 
 })

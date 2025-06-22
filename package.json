@@ -2,7 +2,14 @@
   "name": "kmslh_ts",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "book_a_demo": "npx playwright test book-demo.spec.ts --project chromium",
+    "validate_toggles": "npx playwright test accessibilityToggles.spec.ts --project chromium",
+    "header_links": "npx playwright test headerLinks.spec.ts --project chromium",
+    "buttons": "npx playwright test homePageButtons.spec.ts --project chromium",
+    "all_tests-chrome": "npx playwright test --project chromium",
+    "all_tests": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
