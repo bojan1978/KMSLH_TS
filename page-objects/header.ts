@@ -3,7 +3,7 @@ import { Locator, Page, expect} from '@playwright/test'
 export class HeaderMenu{
 
     readonly page: Page 
-    constructor(page) {
+    constructor(page: Page) {
         this.page = page
     }
 

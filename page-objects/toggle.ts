@@ -3,7 +3,7 @@ import { Page, expect} from '@playwright/test'
 export class Toggle{
 
     readonly page: Page 
-    constructor(page) {
+    constructor(page: Page) {
         this.page = page
     }
 
